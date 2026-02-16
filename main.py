@@ -17,9 +17,6 @@ print("\n" + "="*60)
 print("FACE DETECTION SYSTEM - ONNX VERSION")
 print("="*60)
 
-# ============================================================================
-# 1. CHECK OPENCV
-# ============================================================================
 
 print("\nStep 1: Checking OpenCV...")
 try:
@@ -29,17 +26,11 @@ except:
     print("Install with: pip install opencv-python")
     sys.exit(1)
 
-# ============================================================================
-# 2. CREATE FACE_DATA FOLDER
-# ============================================================================
 
 face_data_dir = "face_data"
 os.makedirs(face_data_dir, exist_ok=True)
 print(f"Created data folder: {face_data_dir}")
 
-# ============================================================================
-# 3. LOAD FACE DETECTOR
-# ============================================================================
 
 print("\nStep 2: Loading face detector...")
 try:
@@ -54,9 +45,6 @@ except Exception as e:
     print(f"Error loading face detector: {e}")
     sys.exit(1)
 
-# ============================================================================
-# 4. LOAD USERS
-# ============================================================================
 
 print("\nStep 3: Loading users...")
 
@@ -69,9 +57,6 @@ else:
     users = {}
     print("ℹ No existing users found")
 
-# ============================================================================
-# 5. TEST CAMERA
-# ============================================================================
 
 def test_camera():
     """Test available cameras"""
@@ -97,9 +82,6 @@ if camera_index is None:
     print("Please check your camera connection")
     sys.exit(1)
 
-# ============================================================================
-# 6. FACE DETECTION FUNCTIONS
-# ============================================================================
 
 def detect_faces(frame):
     """Detect faces in frame"""
@@ -143,8 +125,7 @@ def save_face_image(username, face_image):
         if not success:
             print(f"Failed to save image to {filepath}")
             return None
-        
-        # Update users dictionary
+     
         if username not in users:
             users[username] = {
                 "username": username,
@@ -157,8 +138,7 @@ def save_face_image(username, face_image):
             current_count = users[username].get("samples_count", 0)
             users[username]["samples_count"] = current_count + 1
             users[username]["updated_at"] = datetime.now().isoformat()
-        
-        # Save users to file
+    
         with open(users_file, 'w') as f:
             json.dump(users, f, indent=2)
         
@@ -170,9 +150,6 @@ def save_face_image(username, face_image):
         print(f"Error saving face image: {e}")
         return None
 
-# ============================================================================
-# 7. EXPORT TO ONNX
-# ============================================================================
 
 def export_face_data_to_onnx():
     """Export face detection data to ONNX format"""
@@ -185,7 +162,6 @@ def export_face_data_to_onnx():
         return False
     
     try:
-        # Collect all face images
         all_faces = []
         all_labels = []
         label_map = {}
@@ -210,18 +186,15 @@ def export_face_data_to_onnx():
         if len(all_faces) == 0:
             print("✗ No face images found!")
             return False
-        
-        # Convert to numpy arrays
+ 
         faces_array = np.array(all_faces)
         labels_array = np.array(all_labels)
-        
-        # Reshape for ONNX (batch, channels, height, width)
+ 
         faces_array = faces_array.reshape(-1, 1, 200, 200)
         
         print(f"✓ Collected {len(all_faces)} face images from {len(label_map)} users")
         print(f"  Data shape: {faces_array.shape}")
-        
-        # Save as numpy arrays (ONNX-compatible format)
+
         onnx_dir = os.path.join(face_data_dir, "onnx_export")
         os.makedirs(onnx_dir, exist_ok=True)
         
@@ -239,8 +212,7 @@ def export_face_data_to_onnx():
         print(f"  • {faces_file}")
         print(f"  • {labels_file}")
         print(f"  • {labelmap_file}")
-        
-        # Create metadata file
+    
         metadata = {
             "export_date": datetime.now().isoformat(),
             "num_users": len(label_map),
@@ -267,10 +239,6 @@ def export_face_data_to_onnx():
         import traceback
         traceback.print_exc()
         return False
-
-# ============================================================================
-# 8. CAPTURE FACES
-# ============================================================================
 
 def capture_faces():
     """Capture faces from camera"""
@@ -329,7 +297,6 @@ def capture_faces():
                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         if len(faces) > 0:
-            # Use first detected face
             x, y, w, h = faces[0]
             cv2.rectangle(display_frame, (x, y), (x+w, y+h), (0, 255, 0), 3)
             cv2.putText(display_frame, "FACE DETECTED", (x, y-10),
@@ -373,10 +340,6 @@ def capture_faces():
         print("✗ No face images captured")
         return False
 
-# ============================================================================
-# 9. LIST USERS
-# ============================================================================
-
 def list_users():
     """List all registered users"""
     print("\n" + "="*60)
@@ -403,10 +366,6 @@ def list_users():
     
     print(f"\n✓ TOTAL: {len(users)} users, {total_samples} samples")
 
-# ============================================================================
-# 10. MAIN MENU
-# ============================================================================
-
 def show_main_menu():
     """Show main menu"""
     print("\n" + "="*60)
@@ -430,10 +389,6 @@ def show_main_menu():
     
     choice = input("Select option (0-3): ").strip()
     return choice
-
-# ============================================================================
-# 11. MAIN EXECUTION
-# ============================================================================
 
 if __name__ == "__main__":
     try:
