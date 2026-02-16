@@ -78,17 +78,14 @@ class UserManager:
         user_data = self.users[username]
         samples_folder = user_data['samples_folder']
         
-        # Save image
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
         sample_path = os.path.join(samples_folder, f"sample_{timestamp}.jpg")
         cv2.imwrite(sample_path, face_image)
-        
-        # Update embeddings
+
         user_data['embeddings'].append(embedding)
         user_data['samples_count'] += 1
         user_data['updated_at'] = datetime.now().isoformat()
-        
-        # Calculate average embedding
+
         if user_data['embeddings']:
             embeddings_array = np.array(user_data['embeddings'])
             user_data['avg_embedding'] = np.mean(embeddings_array, axis=0)
