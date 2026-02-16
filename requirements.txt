@@ -1,0 +1,21 @@
+# Core dependencies
+numpy==1.26.4
+opencv-python==4.9.0.80
+mediapipe==0.10.9
+insightface==0.7.3
+onnxruntime==1.17.0
+
+
+# API - FastAPI with Swagger UI
+fastapi==0.110.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.9
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.1
+
+# Utilities
+pyyaml==6.0.1
+aiofiles==23.2.1
+
+

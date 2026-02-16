@@ -1,0 +1,21 @@
+username,image_filename,detection_date,detection_time,image_type,confidence,total_samples,file_path
+GauravK,detected_face_20260120_140624_137.jpg,2026-01-20,14:06:24,Detected,42.73,132,face_data/GauravK/samples/detected_face_20260120_140624_137.jpg,10.28 KB
+GauravK,detected_face_20260121_104606_845.jpg,2026-01-21,10:46:06,Detected,35.39,157,face_data/GauravK/samples/detected_face_20260121_104606_845.jpg,9.69 KB
+GauravK,detected_face_20260121_105121_699.jpg,2026-01-21,10:51:21,Detected,50.16,158,face_data/GauravK/samples/detected_face_20260121_105121_699.jpg,9.27 KB
+VivekJadhav,detected_face_20260121_105145_438.jpg,2026-01-21,10:51:45,Detected,69.70,9,face_data/VivekJadhav/samples/detected_face_20260121_105145_438.jpg,9.99 KB
+KonkaSir,registered_face_20260121_105610_880.jpg,2026-01-21,10:56:10,Registered,N/A,1,face_data/KonkaSir/samples/registered_face_20260121_105610_880.jpg,7.57 KB
+KonkaSir,registered_face_20260121_105611_726.jpg,2026-01-21,10:56:11,Registered,N/A,2,face_data/KonkaSir/samples/registered_face_20260121_105611_726.jpg,8.12 KB
+KonkaSir,registered_face_20260121_105612_545.jpg,2026-01-21,10:56:12,Registered,N/A,3,face_data/KonkaSir/samples/registered_face_20260121_105612_545.jpg,8.88 KB
+KonkaSir,registered_face_20260121_105613_367.jpg,2026-01-21,10:56:13,Registered,N/A,4,face_data/KonkaSir/samples/registered_face_20260121_105613_367.jpg,8.66 KB
+KonkaSir,registered_face_20260121_105614_188.jpg,2026-01-21,10:56:14,Registered,N/A,5,face_data/KonkaSir/samples/registered_face_20260121_105614_188.jpg,8.78 KB
+KonkaSir,detected_face_20260121_105636_699.jpg,2026-01-21,10:56:36,Detected,43.82,6,face_data/KonkaSir/samples/detected_face_20260121_105636_699.jpg,8.75 KB
+KonkaSir,detected_face_20260121_105648_529.jpg,2026-01-21,10:56:48,Detected,46.82,7,face_data/KonkaSir/samples/detected_face_20260121_105648_529.jpg,8.62 KB
+KonkaSir,detected_face_20260121_105701_807.jpg,2026-01-21,10:57:01,Detected,50.87,8,face_data/KonkaSir/samples/detected_face_20260121_105701_807.jpg,8.27 KB
+Ankita,registered_face_20260121_105854_466.jpg,2026-01-21,10:58:54,Registered,N/A,1,face_data/Ankita/samples/registered_face_20260121_105854_466.jpg,8.07 KB
+Ankita,registered_face_20260121_105855_292.jpg,2026-01-21,10:58:55,Registered,N/A,2,face_data/Ankita/samples/registered_face_20260121_105855_292.jpg,7.79 KB
+Ankita,registered_face_20260121_105856_112.jpg,2026-01-21,10:58:56,Registered,N/A,3,face_data/Ankita/samples/registered_face_20260121_105856_112.jpg,7.84 KB
+Ankita,registered_face_20260121_105856_933.jpg,2026-01-21,10:58:56,Registered,N/A,4,face_data/Ankita/samples/registered_face_20260121_105856_933.jpg,7.91 KB
+Ankita,registered_face_20260121_105857_754.jpg,2026-01-21,10:58:57,Registered,N/A,5,face_data/Ankita/samples/registered_face_20260121_105857_754.jpg,8.08 KB
+Ankita,registered_face_20260121_105858_577.jpg,2026-01-21,10:58:58,Registered,N/A,6,face_data/Ankita/samples/registered_face_20260121_105858_577.jpg,8.04 KB
+Ankita,detected_face_20260121_105905_010.jpg,2026-01-21,10:59:05,Detected,69.21,7,face_data/Ankita/samples/detected_face_20260121_105905_010.jpg,7.56 KB
+Ankita,detected_face_20260121_105913_961.jpg,2026-01-21,10:59:13,Detected,44.59,8,face_data/Ankita/samples/detected_face_20260121_105913_961.jpg,7.46 KB

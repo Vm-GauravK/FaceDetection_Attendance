@@ -1,0 +1,97 @@
+{
+  "gauravK": {
+    "username": "gauravK",
+    "created_at": "2026-01-20T09:22:52.142522",
+    "updated_at": "2026-01-20T09:52:07.162000",
+    "samples_count": 8,
+    "folder": "face_data/gauravK"
+  },
+  "VivekJ": {
+    "username": "VivekJ",
+    "created_at": "2026-01-20T09:24:21.016747",
+    "updated_at": "2026-01-20T12:09:29.626342",
+    "samples_count": 28,
+    "folder": "face_data/VivekJ",
+    "last_detected": "2026-01-20T10:10:30.815030"
+  },
+  "AnkitaP": {
+    "username": "AnkitaP",
+    "created_at": "2026-01-20T09:25:02.736927",
+    "updated_at": "2026-01-20T10:08:15.474421",
+    "samples_count": 15,
+    "folder": "face_data/AnkitaP",
+    "last_detected": "2026-01-20T10:08:15.474434"
+  },
+  "SantyanarayanK": {
+    "username": "SantyanarayanK",
+    "created_at": "2026-01-20T09:26:44.230320",
+    "updated_at": "2026-01-20T09:26:50.295525",
+    "samples_count": 5,
+    "folder": "face_data/SantyanarayanK"
+  },
+  "GauravK": {
+    "username": "GauravK",
+    "created_at": "2026-01-20T10:09:29.918090",
+    "updated_at": "2026-01-21T12:46:20.896086",
+    "samples_count": 161,
+    "folder": "face_data/GauravK",
+    "last_detected": "2026-01-20T11:21:00.283774"
+  },
+  "SatyaK": {
+    "username": "SatyaK",
+    "created_at": "2026-01-20T10:11:46.725056",
+    "updated_at": "2026-01-20T10:11:55.985198",
+    "samples_count": 10,
+    "folder": "face_data/SatyaK",
+    "last_detected": "2026-01-20T10:11:55.985217"
+  },
+  "gauravk": {
+    "username": "gauravk",
+    "created_at": "2026-01-20T11:30:54.273673",
+    "updated_at": "2026-01-20T11:31:00.417779",
+    "samples_count": 5,
+    "folder": "face_data/gauravk"
+  },
+  "SatyanarayanK": {
+    "username": "SatyanarayanK",
+    "created_at": "2026-01-20T14:10:01.950569",
+    "updated_at": "2026-01-20T14:10:04.416573",
+    "samples_count": 4,
+    "folder": "face_data/SatyanarayanK"
+  },
+  "AnkitaPatil": {
+    "username": "AnkitaPatil",
+    "created_at": "2026-01-20T14:16:29.353467",
+    "updated_at": "2026-01-20T14:16:43.615481",
+    "samples_count": 7,
+    "folder": "face_data/AnkitaPatil"
+  },
+  "VivekJadhav": {
+    "username": "VivekJadhav",
+    "created_at": "2026-01-20T14:21:53.353557",
+    "updated_at": "2026-01-21T10:51:45.439476",
+    "samples_count": 9,
+    "folder": "face_data/VivekJadhav"
+  },
+  "KonkaSir": {
+    "username": "KonkaSir",
+    "created_at": "2026-01-21T10:56:10.881591",
+    "updated_at": "2026-01-21T10:57:01.807523",
+    "samples_count": 8,
+    "folder": "face_data/KonkaSir"
+  },
+  "Ankita": {
+    "username": "Ankita",
+    "created_at": "2026-01-21T10:58:54.466972",
+    "updated_at": "2026-01-21T10:59:13.961747",
+    "samples_count": 8,
+    "folder": "face_data/Ankita"
+  },
+  "GAurav": {
+    "username": "GAurav",
+    "created_at": "2026-02-16T15:21:35.509712",
+    "updated_at": "2026-02-16T15:21:52.799615",
+    "samples_count": 8,
+    "folder": "face_data/GAurav"
+  }
+}
