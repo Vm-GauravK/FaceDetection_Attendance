@@ -13,7 +13,6 @@ from .schemas import *
 
 router = APIRouter()
 
-# Processor will be set from main.py
 processor = None
 
 def image_to_array(image_file: UploadFile):
@@ -105,11 +104,9 @@ async def create_user(user_data: UserCreate, processor: FaceRecognitionProcessor
     """Create a new user (without face samples)"""
     if user_data.username in processor.user_manager.list_users():
         raise HTTPException(status_code=400, detail=f"User '{user_data.username}' already exists")
-    
-    # Create user folder
+
     user_folder = processor.user_manager.create_user(user_data.username)
-    
-    # Update user info with description
+
     user_info = processor.user_manager.get_user_info(user_data.username)
     if user_data.description:
         user_info['description'] = user_data.description
@@ -149,11 +146,9 @@ async def recognize_faces(
     - **image**: JPEG or PNG image with faces
     - **threshold**: Confidence threshold (0.0 to 1.0)
     - **auto_save**: Automatically save new samples for recognized users
-    """
-    # Read and process image
+
     img = image_to_array(image)
-    
-    # Process image
+
     import time
     start_time = time.time()
     results = processor.process_image(img, auto_save=auto_save)
