@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Fix script for Face Recognition API
 Run this to fix common import issues
@@ -8,7 +7,6 @@ import sys
 
 print("🔧 Fixing Face Recognition API imports...")
 
-# Create missing __init__.py files
 init_files = ['api/__init__.py', 'core/__init__.py']
 for file in init_files:
     if not os.path.exists(file):
@@ -16,7 +14,6 @@ for file in init_files:
             f.write('# Package initialization\n')
         print(f"✅ Created {file}")
 
-# Test imports
 try:
     from api.routes import router
     print("✅ api.routes import successful")
