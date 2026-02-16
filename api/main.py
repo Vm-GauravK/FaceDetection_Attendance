@@ -5,26 +5,24 @@ from contextlib import asynccontextmanager
 import uvicorn
 import os
 
-# Global state
+
 app_state = {}
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Lifespan context manager for startup/shutdown"""
-    # Startup
+
     print("="*60)
     print("🚀 Starting Face Recognition API")
     print("="*60)
-    
-    # Import and initialize processor
+ 
     from core.processor import FaceRecognitionProcessor
     app_state['processor'] = FaceRecognitionProcessor()
     
-    # Import routes after processor is initialized
+
     from .routes import router
     app.include_router(router, prefix="/api")
-    
-    # Update the processor reference in routes module
+
     from . import routes
     routes.processor = app_state['processor']
     
@@ -37,16 +35,14 @@ async def lifespan(app: FastAPI):
     print("="*60)
     
     yield
-    
-    # Shutdown
+
     print("\n🛑 Shutting down Face Recognition API...")
     app_state.clear()
 
-# Create FastAPI app
 app = FastAPI(
     title="Face Recognition API",
     description="""
-    ## Real-time Face Recognition System
+  
     
     **Features:**
     - 👤 User enrollment with face images
@@ -82,7 +78,6 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -335,12 +330,11 @@ async def root():
 @app.get("/test/image")
 async def test_image():
     """Serve a test image"""
-    # Create a simple test image
+
     import cv2
     import base64
     import numpy as np
-    
-    # Create a test image with text
+
     img = np.zeros((300, 500, 3), dtype=np.uint8)
     cv2.putText(img, "Face Recognition API", (50, 100), 
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
